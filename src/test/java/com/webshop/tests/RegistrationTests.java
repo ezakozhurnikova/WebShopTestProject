@@ -13,15 +13,11 @@ public class RegistrationTests extends TestBase {
 
     WebDriver driver;
 
-    @BeforeMethod
+ @BeforeMethod
 
-   public void setUp() {
-      ChromeOptions options = new ChromeOptions();
-        options.addArguments("remote-allow-origins=*");
-        driver = new ChromeDriver();
-        driver.navigate().to("https://demowebshop.tricentis.com");
-        driver.manage().window().maximize();
-        app.getUser().clickOnRegister();
+   public void precondition() {
+
+ app.getUser().clickOnRegister();
     }
 
     @Test

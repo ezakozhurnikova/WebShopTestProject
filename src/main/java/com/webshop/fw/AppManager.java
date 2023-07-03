@@ -27,7 +27,7 @@ public class AppManager {
 
 
     public void init() {
-        System.err.close(); //убирает системные warnings
+        System.err.close();
 
         if (browser.equalsIgnoreCase("chrome")) {
             driver = new ChromeDriver();
